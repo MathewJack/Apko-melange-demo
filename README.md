@@ -7,7 +7,7 @@ A Demo python app created using melange application has a APK and build a contai
 
 ```bash
 Run the below command to build the demo decoder app
-  **melange build melange-app.yaml --arch amd64 --signing-key melange.rsa**
+  melange build melange-app.yaml --arch amd64 --signing-key melange.rsa
 Run the below command to build the demo decoder container
-  **apko build apko-decoder.yaml apko-decoder:0.1 apko-decoder.tar -k melange.rsa.pub**
+  apko build apko-decoder.yaml apko-decoder:0.1 apko-decoder.tar -k melange.rsa.pub
 ```
