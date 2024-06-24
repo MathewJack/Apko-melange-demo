@@ -1,0 +1,34 @@
+package:
+  name: decoder
+  version: 0.1.0
+  description: Decoder melange demo
+  target-architecture:
+    - all
+  copyright:
+    - license: Apache-2.0
+      paths:
+        - "*"
+  dependencies:
+    runtime:
+      - python3
+
+environment:
+  contents:
+    repositories:
+      - https://dl-cdn.alpinelinux.org/alpine/edge/main
+      - https://dl-cdn.alpinelinux.org/alpine/edge/community
+    packages:
+      #- alpine-baselayout-data
+      - busybox-binsh
+      - ca-certificates
+      - python3
+      - curl
+
+
+pipeline:
+  - name: Run Decoder application
+    runs: |
+      EXEC_DIR="${{targets.destdir}}/usr/bin"
+      mkdir -p "${EXEC_DIR}"
+      cp ./decoder.py "${EXEC_DIR}"
+      chmod +x "${EXEC_DIR}/decoder.py"      
