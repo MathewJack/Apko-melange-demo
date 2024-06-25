@@ -19,7 +19,7 @@ environment:
       - https://dl-cdn.alpinelinux.org/alpine/edge/community
     packages:
       #- alpine-baselayout-data
-      - busybox-binsh
+      - busybox
       - ca-certificates
       - python3
       - curl
